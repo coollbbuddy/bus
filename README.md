@@ -4,362 +4,415 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>California Promos LLC | Premium Promotional Products San Diego</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Modern Minimalist & Luxury Corporate Color Palette */
-        :root {
-            --primary: #0a192f;       /* Deep Navy */
-            --accent: #d4af37;        /* Muted Gold */
-            --text-dark: #1e293b;     /* Charcoal Black */
-            --text-light: #f8fafc;    /* Off White */
-            --bg-light: #f1f5f9;      /* Light Gray Accent */
-            --font-main: 'Helvetica Neue', Arial, sans-serif;
-        }
-
+        /* Modern Reset & Color Palette */
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        :root {
+            --bg-light: #f8fafc;
+            --brand-blue: #0284c7; /* Vibrant SoCal Ocean Blue */
+            --brand-orange: #f97316; /* Vivid California Poppy Orange */
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --card-border: #e2e8f0;
+            --max-width: 1200px;
         }
 
         body {
-            font-family: var(--font-main);
+            background-color: var(--bg-light);
             color: var(--text-dark);
-            background-color: #ffffff;
             line-height: 1.6;
         }
 
-        /* Top Notification Bar - Modern Focus */
-        .announcement-bar {
-            background-color: var(--primary);
-            color: var(--accent);
-            text-align: center;
-            padding: 8px 20px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        /* Navigation Bar */
+        nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--card-border);
         }
 
-        /* Elegant Navigation */
-        header {
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 8%;
-            background: #ffffff;
-            box-shadow: 0 1px 0px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
 
-        .logo-container {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo-main {
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--primary);
-            letter-spacing: 1.5px;
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--brand-blue);
             text-transform: uppercase;
+            letter-spacing: -0.5px;
         }
+        .logo span { color: var(--brand-orange); }
 
-        .logo-sub {
-            font-size: 11px;
-            color: var(--accent);
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-
-        nav a {
-            margin-left: 35px;
-            text-decoration: none;
+        .nav-links a {
             color: var(--text-dark);
-            font-weight: 500;
-            font-size: 14px;
-            letter-spacing: 0.5px;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--accent);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), 
-                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-            color: var(--text-light);
-            padding: 140px 8%;
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .hero-tag {
-            color: var(--accent);
-            font-size: 14px;
+            text-decoration: none;
+            margin-left: 25px;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--brand-blue); }
+
+        /* Vivid Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(2,132,199,0.07) 0%, rgba(249,115,22,0.05) 100%);
+            padding: 100px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 46px;
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -1.5px;
             line-height: 1.2;
-            font-weight: 700;
-            max-width: 800px;
-            margin-bottom: 25px;
-            letter-spacing: -0.5px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(to right, var(--brand-blue), var(--brand-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .hero p {
-            font-size: 18px;
-            color: #94a3b8;
-            max-width: 600px;
-            margin-bottom: 35px;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
         }
 
         .cta-btn {
-            background-color: var(--accent);
-            color: var(--primary);
-            padding: 15px 35px;
+            background: var(--brand-blue);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            font-weight: 700;
+            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+            transition: all 0.2s;
             display: inline-block;
-            width: fit-content;
-            transition: all 0.3s ease;
-            border: 1px solid var(--accent);
         }
 
         .cta-btn:hover {
-            background-color: transparent;
-            color: var(--accent);
+            transform: translateY(-2px);
+            background: #0369a1;
+            box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
         }
 
-        /* Modern Trends Feature Section */
-        .section-container {
-            padding: 90px 8%;
+        /* Shop Section */
+        .section-title {
+            max-width: var(--max-width);
+            margin: 60px auto 30px auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: bottom;
         }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
+        .section-title h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
 
-        .section-header span {
-            color: var(--accent);
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .section-header h2 {
-            font-size: 32px;
-            color: var(--primary);
-            margin-top: 5px;
-            font-weight: 700;
-        }
-
-        .grid-three {
+        /* Product Catalog Grid */
+        .catalog-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
         }
 
         .product-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            padding: 40px 30px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: white;
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
         }
 
         .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-color: var(--accent);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #cbd5e1;
         }
 
-        .card-icon {
-            font-size: 24px;
-            color: var(--accent);
+        .product-img {<img src="eco-cup.jpg" alt="Untitled design">
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            background-color: #f1f5f9;
+        }
+
+        .product-info {
+            padding: 25px;
+        }
+
+        .product-info h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .product-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
             margin-bottom: 20px;
+            height: 40px;
+            overflow: hidden;
         }
 
-        .product-card h3 {
-            font-size: 20px;
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-weight: 600;
+        /* Live Pricing Options Interface */
+        .pricing-box {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px dashed #cbd5e1;
         }
 
-        .product-card p {
-            color: #64748b;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        /* Contemporary Context Strip */
-        .context-strip {
-            background-color: var(--bg-light);
+        .option-group {
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            gap: 30px;
-            padding: 60px 8%;
-            border-top: 1px solid #e2e8f0;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .context-text {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .context-text h4 {
-            font-size: 22px;
-            color: var(--primary);
             margin-bottom: 10px;
         }
 
-        .context-text p {
-            color: #64748b;
-            font-size: 15px;
+        .option-group label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-dark);
         }
 
-        /* Contact & Consultation Section */
-        .contact-section {
-            background-color: var(--primary);
-            color: var(--text-light);
+        .qty-input {
+            width: 80px;
+            padding: 6px 10px;
+            border: 1px solid var(--card-border);
+            border-radius: 6px;
+            font-weight: 600;
             text-align: center;
-            padding: 80px 8%;
         }
 
-        .contact-section h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-
-        .contact-section p {
-            color: #94a3b8;
-            max-width: 600px;
-            margin: 0 auto 40px auto;
-            font-size: 16px;
-        }
-
-        .contact-details {
+        .price-display {
             display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            font-size: 15px;
-            letter-spacing: 0.5px;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #e2e8f0;
         }
 
-        .contact-details span {
-            color: var(--accent);
+        .price-each {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .price-each span, .total-cost span {
+            font-weight: 700;
+            color: var(--text-dark);
         }
 
-        /* Sophisticated Footer */
-        footer {
-            background-color: #071120;
-            color: #64748b;
-            padding: 40px 8%;
+        .total-cost {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--brand-orange);
+        }
+
+        .order-btn {
+            display: block;
+            width: 100%;
             text-align: center;
-            font-size: 13px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            letter-spacing: 0.5px;
+            background: var(--text-dark);
+            color: white;
+            padding: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: background 0.2s;
         }
 
-        @media (max-width: 768px) {
-            header { padding: 20px 5%; flex-direction: column; gap: 20px; }
-            nav a { margin: 0 10px; }
-            .hero h1 { font-size: 32px; }
-            .section-container { padding: 60px 5%; }
+        .order-btn:hover {
+            background: var(--brand-blue);
+        }
+
+        /* About / Trust Banner */
+        .trust-banner {
+            max-width: var(--max-width);
+            margin: 80px auto;
+            padding: 40px 20px;
+            background: var(--text-dark);
+            color: white;
+            border-radius: 24px;
+            text-align: center;
+        }
+
+        .trust-banner h2 { font-size: 1.8rem; margin-bottom: 10px; font-weight: 800; }
+        .trust-banner p { color: #94a3b8; max-width: 600px; margin: 0 auto; }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--card-border);
+            padding: 40px 20px;
+            text-align: center;
+            background: white;
+            margin-top: 100px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media(max-width: 768px) {
+            .hero h1 { font-size: 2.3rem; }
+            .section-title { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="announcement-bar">
-        NOW FILTERING FOR ECO-RESPONSIBLE MERCHANDISE & NEXT-GEN TECH GIFTS
-    </div>
-
-    <header>
-        <div class="logo-container">
-            <span class="logo-main">California Promos</span>
-            <span class="logo-sub">LLC • San Diego</span>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">California<span>Promos</span></div>
+            <div class="nav-links">
+                <a href="#products">Shop Products</a>
+                <a href="#about">Our Story</a>
+                <a href="#contact">Request Quote</a>
+            </div>
         </div>
-        <nav>
-            <a href="#solutions">Solutions</a>
-            <a href="#initiatives">Corporate Trends</a>
-            <a href="#contact">Consultation</a>
-        </nav>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Elevate Your Brand with Custom <span>San Diego Swagger</span></h1>
+            <p>High-quality corporate apparel, custom drinkware, and tech accessories tailored for your business. Select options below to calculate instant bulk rates.</p>
+            <a href="#products" class="cta-btn">Browse Vivid Catalog</a>
+        </div>
     </header>
 
-    <section class="hero">
-        <span class="hero-tag">Corporate Merchandising Redefined</span>
-        <h1>Sophisticated Promotional Solutions Tailored for Global Enterprises</h1>
-        <p>From modern executive gifts to eco-conscious trade show assets, we design premium tangibles that resonate with your brand's core values.</p>
-        <a href="#contact" class="cta-btn">Begin Project Consultation</a>
+    <main id="products">
+        <div class="section-title">
+            <h2>Best Sellers & Bulk Pricing</h2>
+            <p style="color: var(--text-muted);">Adjust bulk quantities below to calculate custom corporate discounts.</p>
+        </div>
+
+        <div class="catalog-container">
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="16 Oz Custom Sided Cup" class="product-img">
+                <div class="product-info">
+                    <h3>16 Oz. Eco Soft-Sided Cup</h3>
+                    <p class="product-desc">BPA-free, completely recyclable, and proudly made in the USA. Ideal for outdoor events and festivals.</p>
+                    
+                    <div class="pricing-box">
+                        <div class="option-group">
+                            <label>Bulk Quantity:</label>
+                            <input type="number" class="qty-input" value="100" min="50" step="50" oninput="calculatePrice(this, 1.25, 'total-1', 'unit-1')">
+                        </div>
+                        <div class="price-display">
+                            <div class="price-each">Unit: <span id="unit-1">$1.25</span></div>
+                            <div class="total-cost">Total: <span id="total-1">$125.00</span></div>
+                        </div>
+                    </div>
+                    <a href="mailto:info@californiapromosllc.com?subject=Inquiry: 16oz Eco Cup" class="order-btn">Lock In This Price</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80" alt="Custom Corporate T-Shirts" class="product-img">
+                <div class="product-info">
+                    <h3>Premium Tri-Blend Logo Tee</h3>
+                    <p class="product-desc">Ultra-soft, ring-spun combed cotton custom printed with your high-fidelity brand graphic.</p>
+                    
+                    <div class="pricing-box">
+                        <div class="option-group">
+                            <label>Bulk Quantity:</label>
+                            <input type="number" class="qty-input" value="50" min="24" step="25" oninput="calculatePrice(this, 8.50, 'total-2', 'unit-2')">
+                        </div>
+                        <div class="price-display">
+                            <div class="price-each">Unit: <span id="unit-2">$8.50</span></div>
+                            <div class="total-cost">Total: <span id="total-2">$425.00</span></div>
+                        </div>
+                    </div>
+                    <a href="mailto:info@californiapromosllc.com?subject=Inquiry: Tri-Blend Tee" class="order-btn">Lock In This Price</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1624996379697-f01d168b1a52?auto=format&fit=crop&w=600&q=80" alt="Custom Laser Engraved USB Powerbanks" class="product-img">
+                <div class="product-info">
+                    <h3>Sleek Metallic Power Bank</h3>
+                    <p class="product-desc">5000mAh capacity backup battery with brilliant laser-engraved luxury look for your executive staff.</p>
+                    
+                    <div class="pricing-box">
+                        <div class="option-group">
+                            <label>Bulk Quantity:</label>
+                            <input type="number" class="qty-input" value="25" min="10" step="5" oninput="calculatePrice(this, 14.95, 'total-3', 'unit-3')">
+                        </div>
+                        <div class="price-display">
+                            <div class="price-each">Unit: <span id="unit-3">$14.95</span></div>
+                            <div class="total-cost">Total: <span id="total-3">$373.75</span></div>
+                        </div>
+                    </div>
+                    <a href="mailto:info@californiapromosllc.com?subject=Inquiry: Metallic Power Bank" class="order-btn">Lock In This Price</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <section id="about" class="trust-banner">
+        <h2>Serving San Diego County & Beyond</h2>
+        <p>California Promos, LLC delivers high-quality merchandise, promotional items, and enterprise corporate gifts. No hidden setup fees, just stunning results every single time.</p>
     </section>
 
-    <section class="section-container" id="solutions">
-        <div class="section-header">
-            <span>Curated Inventory Categories</span>
-            <h2>Current Corporate Trends</h2>
-        </div>
-        <div class="grid-three">
-            <div class="product-card">
-                <div class="card-icon">■</div>
-                <h3>Sustainable Brand Goods</h3>
-                <p>Align your physical footprint with corporate responsibility. Discover high-quality apparel constructed from certified organic fibers and premium upcycled materials.</p>
-            </div>
-            <div class="product-card">
-                <div class="card-icon">■</div>
-                <h3>Next-Gen Workplace Tech</h3>
-                <p>Functional, elegant technology integrations. Custom high-performance wireless mag-safe charging stations, sleek smart trackers, and noise-canceling audio assets.</p>
-            </div>
-            <div class="product-card">
-                <div class="card-icon">■</div>
-                <h3>Premium Experience Kits</h3>
-                <p>Designed for hybrid teams and keynote events. Bespoke unboxing experiences featuring custom curated drinkware, fine leather journals, and custom high-end essentials.</p>
-            </div>
-        </div>
-    </section>
-
-    <div class="context-strip" id="initiatives">
-        <div class="context-text">
-            <h4>Ready for the Next Trade Show Season?</h4>
-            <p>Conventions and corporate expos demand highly memorable collateral. Our logistics framework ensures targeted shipping directly to Southern California conference hubs or international event spaces smoothly.</p>
-        </div>
-    </div>
-
-    <section class="contact-section" id="contact">
-        <h2>Initiate Your Brand Transformation</h2>
-        <p>Connect with a corporate brand strategist to oversee your custom print specifications, volume requirements, and specialized production schedules.</p>
-        
-        <div class="contact-details">
-            <p><span>Email:</span> info@californiapromosllc.com</p>
-            <p><span>Inquiries:</span> (858) 207-8019</p>
-            <p><span>Location:</span> San Diego, CA</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 California Promos LLC. All Rights Reserved. Dignified brand solutions built with precision in Southern California.</p>
+    <footer id="contact">
+        <p>© 2026 California Promos, LLC. Located in Sunny San Diego, California.</p>
+        <p style="margin-top: 10px; font-size: 0.8rem; color: var(--brand-blue);">Need a customized layout setup? Reach out to your development team to inject your full product sheet database.</p>
     </footer>
 
+    <script>
+        function calculatePrice(inputElement, basePrice, totalId, unitId) {
+            let qty = parseInt(inputElement.value);
+            if(isNaN(qty) || qty < 1) {
+                qty = 1;
+            }
+
+            // Simple Tiered Wholesale logic: More items bought = lower individual price
+            let activeUnitPrice = basePrice;
+            if (qty >= 100) {
+                activeUnitPrice = basePrice * 0.85; // 15% Wholesale Discount
+            } else if (qty >= 50) {
+                activeUnitPrice = basePrice * 0.92; // 8% Wholesale Discount
+            }
+
+            let totalCost = qty * activeUnitPrice;
+
+            // Render live elements
+            document.getElementById(unitId).innerText = "$" + activeUnitPrice.toFixed(2);
+            document.getElementById(totalId).innerText = "$" + totalCost.toFixed(2);
+        }
+    </script>
 </body>
 </html>
